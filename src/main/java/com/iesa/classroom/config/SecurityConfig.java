@@ -20,6 +20,7 @@ public class SecurityConfig {
                         .requestMatchers("/auth/register", "/auth/login").permitAll()
                         .anyRequest().authenticated()
                 )
+                //TODO Remove deprecated method
                 .httpBasic();
 
         return http.build();
